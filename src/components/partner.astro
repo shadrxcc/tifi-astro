@@ -1,0 +1,24 @@
+---
+import { storytelling } from "../data.astro";
+import Storytellingcard from "./storytellingcard.astro";
+---
+
+<main class="flex flex-col my-[5rem] items-center gap-y-16">
+  <h2 class="text-[64px] font-semibold w-[80%] text-center">
+    ...we are your creative partner in <span class="text-primaryorange"
+      >visual</span
+    > storytelling...
+  </h2>
+
+  <div class="grid sm:grid-cols-3 lg:grid-cols-4 px-10 xl:px-20 gap-6">
+    {
+      storytelling.map((item) => (
+        <Storytellingcard
+          icon={item.icon}
+          desc={item.desc}
+          title={item.title}
+        />
+      ))
+    }
+  </div>
+</main>
