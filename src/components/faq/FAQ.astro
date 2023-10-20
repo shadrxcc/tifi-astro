@@ -1,0 +1,50 @@
+---
+interface Props {
+	data?: {
+    title: string
+    body: string
+  }[]
+}
+
+const initialData = [
+  {
+    title: "Epcot Center",
+    body: "Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.",
+  },
+  {
+    title: "Epcot Center",
+    body: "Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.",
+  },
+  {
+    title: "Epcot Center",
+    body: "Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.",
+  },
+  {
+    title: "Epcot Center",
+    body: "Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.",
+  },
+  {
+    title: "Epcot Center",
+    body: "Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.",
+  },
+]
+
+const { data = initialData } = Astro.props;
+---
+<section>
+  <header>
+    <h1>FAQ</h1>
+    <div>
+      {
+        data.map(({title, body}) => {
+          return (
+            <details>
+              <summary>{title}</summary>
+              <p>{body}</p>
+            </details>
+          )
+        })
+      }
+    </div>
+  </header>
+</section>
