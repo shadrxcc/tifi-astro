@@ -1,3 +1,22 @@
-<header>
-  Header
+---
+import tifi from "../assets/icons/tifi.svg?raw";
+import SVG from "./SVG.astro";
+---
+
+<header class="flex justify-between items-center py-6 px-8 rounded-lg shadow-[0px_14px_16px_0px_rgba(29,41,57,0.05)]">
+  <div>
+    <SVG raw={tifi} />
+  </div>
+  <div class="menu flex w-auto">
+    <div class=""></div>
+    <div class="w-full">
+      <nav class="inline-flex gap-8">
+        <span><a href="#" class="text-[#1D2939]">About Us</a></span>
+        <span><a href="#" class="text-[#1D2939]">Portfolio</a></span>
+        <span><a href="#" class="text-[#1D2939]">Clients</a></span>
+        <span><a href="#" class="text-[#1D2939]">Resources</a></span>
+      </nav>
+    </div>
+  </div>
+  <button class="btn btn-primary">LET'S TALK</button>
 </header>
