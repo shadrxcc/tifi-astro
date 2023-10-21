@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  desc: string;
+  image: string;
+}
+
+const { image, title, desc } = Astro.props;
+---
+
+<div class="lg:h-[10rem]">
+  <img src={image} class="w-full rounded-t-lg h-[17rem]" alt="" />
+
+  <div class="bg-[#101828] rounded-b-lg p-4">
+    <div>
+      <div class="flex text-sm text-[#98A2B3] items-center">
+        <p>October 12, 2023</p>
+        <hr class="h-[15px]" />
+        <p>8 mins</p>
+        <hr class="h-[15px]" />
+        <p class="text-primaryorange font-bold">Storytelling</p>
+      </div>
+
+      <p class="text-2xl text-white font-bold">{title}</p>
+    </div>
+
+    <p class="text-base hidden text-[#98A2B3]">{desc}</p>
+  </div>
+</div>

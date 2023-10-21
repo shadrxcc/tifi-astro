@@ -1,0 +1,76 @@
+---
+import pallete1 from "../../assets/pallete1.png";
+import pallete2 from "../../assets/pallete2.png";
+import pallete3 from "../../assets/pallete3.png";
+// const pallete = [
+// {
+//     title: "The Art of Storytelling Through Video",
+//     image: '/src/assets/content-3.png',
+//     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
+//   },
+
+//   {
+//     title: "7 Essential Video Editing Techniques",
+//     image: '/src/assets/content-2.png',
+//     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
+//   },
+
+//   {
+//     title: "The Impact of Color Grading in Video Editing",
+//     image: '/src/assets/content-3.png',
+//     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
+//   },
+// ]
+---
+
+<section class="px-4 bg-[#F2F4F7] my-16 flex flex-col items-center gap-y-14 py-16 sm:px-8 lg:px-20">
+  <div>
+    <h1 class="text-[32px] sm:text-[48px] lg:text-[64px]">Our Palette of <span class="text-primaryorange">Corporate</span> Video Services</h1>
+    <p class="text-center">Unlocking the Power of Visual Storytelling for Your Business</p>
+  </div>
+
+  <div class="flex flex-col lg:flex-row gap-8">
+    <div class="flex flex-col items-center">
+      <img src={pallete1.src} class="w-full h-[17em]" alt="" />
+      <div class="flex flex-col items-center px-4 py-8 bg-white text-center">
+        <p>Product Demonstrations</p>
+        <p>
+          Present your products in their best light with dynamic and engaging
+          demonstrations that showcase their features and benefits.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+        <img src={pallete2.src} class="w-full h-[17em]" alt="" />
+        <div class="flex flex-col items-center px-4 py-8 bg-white text-center">
+          <p>Product Demonstrations</p>
+          <p>
+            Present your products in their best light with dynamic and engaging
+            demonstrations that showcase their features and benefits.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <img src={pallete3.src} class="w-full h-[17em]" alt="" />
+        <div class="flex flex-col items-center px-4 py-8 bg-white text-center">
+          <p>Product Demonstrations</p>
+          <p>
+            Present your products in their best light with dynamic and engaging
+            demonstrations that showcase their features and benefits.
+          </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<style>
+    h1 {
+        color: var(--gray-1100, #101828);
+text-align: center;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+    }
+</style>

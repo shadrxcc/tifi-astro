@@ -1,0 +1,42 @@
+---
+import day from "../../assets/dayinlife.png"
+---
+
+<section class="px-4 bg-[#F2F4F7] sm:px-8 flex flex-col mt-16 py-16 gap-y-14 lg:px-10">
+  <h1 class="text-[32px] sm:text-[48px]lg:text-[64px]">Carefully Picked Videos</h1>
+  <div class="flex flex-col gap-y-12">
+    <div class="flex flex-col gap-y-4 sm:flex-row items-center">
+    <div class="flex-1 hidden sm:block"></div>
+    <div class="flex flex-1 text-base justify-center gap-x-10">
+      <p class="text-base tab-trigger" data-form="business">Business</p>
+      <p>Individual</p>
+    </div>
+
+    <div class="flex-1 flex justify-end">
+      <select class="flex w-full items-center" name="filter" id="filter">
+        <option value="short films">Short Films</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 justify-center gap-6">
+    <img src={day.src} class="" alt="">
+    <img src={day.src} class="" alt="">
+    <img src={day.src} class="" alt="">
+    <img src={day.src} class="" alt="">
+    <img src={day.src} class="" alt="">
+    <img src={day.src} class="" alt="">
+  </div>
+  </div>
+  
+</section>
+
+<style>
+  h1 {
+    color: var(--gray-1000, #1D2939);
+text-align: center;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+</style>
