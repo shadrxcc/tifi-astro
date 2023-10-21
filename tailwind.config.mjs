@@ -13,14 +13,14 @@ export default withMT({
 				'body': ['"Plus Jakarta Sans"'],
 				'button': "Inter"
 			},
-			screens: {
-				'2xl': {'max': '1535px'},
-				'xl': {'max': '1279px'},
-				'lg': {'max': '1023px'},
-				'md': {'max': '767px'},
-				'sm': {'max': '639px'},
-			},
+			colors: {
+				"primaryorange": "#FF601F",
+				"primaryblue": '#101828',
+				"tealbrown": "rgba(255, 77, 0, 0.17)",
+				"primarygrey": 'rgba(255, 255, 255, 0.21)'
 		},
 	},
 	plugins: [],
+}
+
 })

@@ -1,0 +1,48 @@
+---
+import Explorecard from "./explorecard.astro";
+const exploredata = [
+  {
+    title: "The Art of Storytelling Through Video",
+    image: '/src/assets/content-3.png',
+    desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
+  },
+
+  {
+    title: "7 Essential Video Editing Techniques",
+    image: '/src/assets/content-2.png',
+    desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
+  },
+
+  {
+    title: "The Impact of Color Grading in Video Editing",
+    image: '/src/assets/content-3.png',
+    desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
+  },
+];
+---
+
+<section class="px-4 sm:px-8 lg:px-20 flex h-fit flex-col py-14 gap-y-14">
+  <div class="text-center">
+    <h1 class="text-[32px] sm:text-[48px] lg:text-[64px] text-[#1D2939] font-semibold">
+      Explore Our Captivating Content!
+    </h1>
+    <p class="text-[#344054]">
+      Uncover a world where stories come alive, emotions resonate, and visuals
+      speak louder than words. Our captivating content is a journey waiting for
+      you. Join us and experience the magic of tifi.tv.
+    </p>
+  </div>
+
+  <div class="grid lg:grid-cols-3 gap-8">
+    {exploredata.map((explore) => (
+        <Explorecard title={explore.title} desc={explore.desc} image={explore.image}/>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* section {
+    background: var(--gray-300, #f2f4f7);
+    height: 700px;
+    } */
+</style>

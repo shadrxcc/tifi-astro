@@ -1,0 +1,30 @@
+---
+import Letscreateform from "../home/letscreateform.astro";
+
+---
+
+<section class="flex px-4 sm:px-8 flex-col gap-y-12 py-16">
+  <h1 class="text-[32px] lg:px-20 sm:text-[48px] lg:text-[72px]">Let us know how we can help you.</h1>
+
+  <Letscreateform/>
+</section>
+
+<style>
+  section {
+    background-image: url(../../assets/help.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1 {
+    color: var(--gray-1100, #101828);
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+</style>
