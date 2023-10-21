@@ -44,6 +44,21 @@ const { title, titleHeader, showHeader = true, showFooter = true } = Astro.props
     :root {
       --page-padding: 10rem
     }
+    @media screen and (max-width: 1440px) {
+      :root {
+        --page-padding: 5rem
+      }
+    }
+    @media screen and (max-width: 834px) {
+      :root {
+        --page-padding: 2.5rem
+      }
+    }
+    @media screen and (max-width: 400px) {
+      :root {
+        --page-padding: 1rem
+      }
+    }
     body {
       @apply text-[#344054]
     }
