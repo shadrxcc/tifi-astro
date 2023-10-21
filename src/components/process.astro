@@ -1,0 +1,72 @@
+---
+import expect1 from "../assets/expect-1.png";
+import expect2 from "../assets/expect-2.png";
+import expect3 from "../assets/expect-3.png";
+---
+<main id="wrapper" class="py-20">
+    <section class="px-4 sm:px-10 xl:px-32 flex flex-col gap-y-14">
+  <div class="flex flex-col items-center">
+    <p class="text-xl font-bold text-primaryorange">OUR PROCESS</p>
+    <p class="sm:text-[45px] text-center xl:text-[64px] font-semibold">
+      What you can expect...
+    </p>
+  </div>
+
+  <div class="flex flex-col lg:flex-row gap-8 items-center">
+    <div id="card" class="flex flex-1 flex-col items-center gap-y-8">
+      <img src={expect1.src} class="w-full h-[10rem] rounded-t-lg" alt="" />
+      <div class="text-center space-y-2 px-4 pb-6">
+        <p class="text-lg">
+          Strategic <span class="text-primaryorange">Collaboration</span>
+        </p>
+        <p class="text-base text-[#344054]">
+          We collaborate with you to translate your ideas into captivating
+          visual narratives that meet your goals.
+        </p>
+      </div>
+    </div>
+
+    <div id="card" class="flex flex-1 flex-col items-center gap-y-8">
+      <img src={expect2.src} class="w-full h-[10rem] rounded-t-lg" alt="" />
+      <div class="text-center space-y-2 px-4 pb-6">
+        <p class="text-lg">
+          Professional <span class="text-primaryorange">Talent</span>
+        </p>
+        <p class="text-base text-[#344054]">
+          We bring together a pool of skilled video editors, cinematographers,
+          and storytellers who are passionate about their craft.
+        </p>
+      </div>
+    </div>
+
+    <div id="card" class="flex flex-1 flex-col items-center gap-y-8">
+      <img src={expect3.src} class="w-full h-[10rem] rounded-t-lg" alt="" />
+      <div class="text-center space-y-2 px-4 pb-6">
+        <p class="text-lg">
+          <span class="text-primaryorange">Timely</span>
+           Delivery
+        </p>
+        <p class="text-base text-[#344054]">
+          We understand the importance of deadlines. Count on us to deliver your
+          projects on time, every time.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<style>
+  #wrapper {
+    border-top: 1px solid var(--gray-700-main, #667085);
+    background: #f2f4f7;
+  }
+
+  #card {
+    border-radius: 8px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(2px);
+  }
+</style>
