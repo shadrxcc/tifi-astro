@@ -13,7 +13,7 @@ const { header: {title, subtitle} } = Astro.props;
 ---
 <section class="flex flex-col gap-12 items-center">
   <header class="flex flex-col gap-6 max-w-[1148px] items-center">
-    <h1 set:html={title} class="text-[#101828] text-center leading-[normal] text-7xl font-bold font-sans uppercase [&>span]:text-[#FF601F]"/>
+    <h1 set:html={title} class="text-[#101828] text-center leading-[normal] text-7xl font-bold font-serif uppercase [&>span]:text-[#FF601F]"/>
     {subtitle && <p class="text-center w-3/4" set:html={subtitle}/>}
   </header>
   <div id="contact_form" class="w-full" data-form-type="bussiness">
