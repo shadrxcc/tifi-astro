@@ -29,7 +29,9 @@ const { title, titleHeader, showHeader = true, showFooter = true } = Astro.props
   <body>
     <main transition:animate="slide">
       {showHeader && <Header />}
-      <slot />
+      <div id="container">
+        <slot />
+      </div>
       {showFooter && <Footer />}
     </main>
   </body>
@@ -39,11 +41,17 @@ const { title, titleHeader, showHeader = true, showFooter = true } = Astro.props
   @tailwind components;
   @tailwind utilities;
   @layer base {
+    :root {
+      --page-padding: 10rem
+    }
     body {
       @apply text-[#344054]
     }
     textarea {
       @apply resize-none
+    }
+    #container, #site-footer {
+      @apply flex flex-col [&>section]:px-[var(--page-padding)]
     }
   }
   @layer components {

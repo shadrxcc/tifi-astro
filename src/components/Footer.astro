@@ -1,11 +1,56 @@
 ---
 import FAQ from "./faq/FAQ.astro";
 import Contact from "./contact/Contact.astro"
+import SVG from "./SVG.astro";
+// icons
+import airbnb from "../assets/icons/airbnb.svg?raw"
+import linear from "../assets/icons/linear.svg?raw"
+import paypal from "../assets/icons/paypal.svg?raw"
+import uber from "../assets/icons/uber.svg?raw"
+import youtube from "../assets/icons/youtube.svg?raw"
+import tifi from "../assets/icons/tifi.svg?raw"
+import twitter from "../assets/icons/twitter.svg?raw"
+import linkedin from "../assets/icons/linkedin.svg?raw"
+import facebook from "../assets/icons/facebook.svg?raw"
 ---
-<footer>
-  <Contact header={{
-    title: "Let’s <span>create</span> something special together.",
-    subtitle: `In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your <span class="font-bold">brand</span> and visual storytelling.`
-  }}/>
-  <FAQ />
+<footer id="site-footer">
+  <section class="py-24">
+    <Contact header={{
+      title: "Let’s <span>create</span> something special together.",
+      subtitle: `In just 48 hours, our experts will meticulously assess your video content and reveal untapped opportunities for enhancing your <span class="font-bold">brand</span> and visual storytelling.`
+    }}/>
+  </section>
+  <section class="border-t border-t-[#667085] py-24">
+    <FAQ/>
+  </section>
+  <section class="bg-[rgba(255,77,0,0.17)] py-[45px] flex flex-col items-center gap-8">
+    <p class="text-[#1D2939] font-medium">Join 4,000+ companies already growing</p>
+    <div class="flex justify-between w-full">
+      <SVG raw={airbnb}/>
+      <SVG raw={linear}/>
+      <SVG raw={paypal}/>
+      <SVG raw={youtube}/>
+      <SVG raw={uber}/>
+    </div>
+  </section>
+  <section class="flex flex-col gap-[65.33px] pt-16 pb-12">
+    <div class="flex flex-col gap-8">
+      <SVG raw={tifi} />
+      <p class="max-w-[343px] text-[#1D2939]">Experience the power of storytelling through the lens of creativity and innovation.</p>
+      <nav class="flex gap-8 flex-nowrap">
+        <a href="#" class="text-[#667085]">Portfolio</a>
+        <a href="#" class="text-[#667085]">Resources</a>
+        <a href="#" class="text-[#667085]">For Businesses</a>
+        <a href="#" class="text-[#667085]">For Individuals</a>
+      </nav>
+    </div>
+    <div class="pt-8 border-t border-t-[#EAECF0] flex justify-between gap-8">
+      <span class="text-[#667085]">&copy; 2077 Tifi. All rights reserved.</span>
+      <span class="flex gap-6">
+        <SVG raw={twitter} />
+        <SVG raw={linkedin} />
+        <SVG raw={facebook} />
+      </span>
+    </div>
+  </section>
 </footer>
