@@ -1,0 +1,112 @@
+---
+import { Tabs } from 'astro-tabs';
+//import {TabsDefault} from "../../react/tab.tsx";
+import { motion, AnimatePresence } from "framer-motion"
+interface Props {
+	header: {
+    title: string
+    subtitle? : string
+  }
+}
+
+const { header: {title, subtitle} } = Astro.props;
+---
+<section class="flex flex-col gap-12 items-center">
+  <header class="flex flex-col gap-6 max-w-[1148px] items-center">
+    <h1 set:html={title} class="text-[#101828] text-center leading-[normal] text-7xl font-bold font-sans uppercase [&>span]:text-[#FF601F]"/>
+    {subtitle && <p class="text-center w-3/4" set:html={subtitle}/>}
+  </header>
+  <div id="contact_form" class="w-full" data-form-type="bussiness">
+    <Tabs>
+      <Fragment slot="tab-1">Business</Fragment>
+      <Fragment slot="tab-2">Individual</Fragment>
+
+      <Fragment slot="panel-1">
+        <form action="post" class="form">
+          <div>
+            <div>
+              <label for="company_name">Company Name</label>
+              <input class="input" type="text" name="company_name" placeholder="Enter business name" required/>
+            </div>
+            <div>
+              <label for="email">Business Email Address</label>
+              <input class="input" type="email" name="email" placeholder="Enter email address" required/>
+            </div>
+            <div>
+              <label for="subject">Subject (Optional)</label>
+              <input class="input" type="text" name="subject" placeholder="Enter subject"/>
+            </div>
+            <div>
+              <label for="message">Tell us what you need</label>
+              <textarea rows="3" name="message" placeholder="Type your message..." required/>
+            </div>
+          </div>
+          <button class="btn btn-primary">SEND MESSAGE</button>
+        </form>
+      </Fragment>
+      <Fragment slot="panel-2">
+        <form action="post" class="form">
+          <div>
+            <div>
+              <label for="name">Name</label>
+              <input class="input" type="text" name="name" placeholder="Enter your name" required/>
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input class="input" type="email" name="email" placeholder="Enter email address" required/>
+            </div>
+            <div>
+              <label for="subject">Subject (Optional)</label>
+              <input class="input" type="text" name="subject" placeholder="Enter subject"/>
+            </div>
+            <div>
+              <label for="message">Tell us what you need</label>
+              <textarea rows="3" name="message" placeholder="Type your message..." required/>
+            </div>
+          </div>
+          <button class="btn btn-primary">SEND MESSAGE</button>
+        </form>
+      </Fragment>
+    </Tabs>
+    <!-- <TabsDefault client:load /> -->
+  </div>
+</section>
+
+<style is:global>
+  @tailwind components;
+  .tabs > nav {
+    @apply justify-center gap-[40px] border-b border-b-[#D0D5DD]
+  }
+  .tab {
+    @apply pb-2 border-b-4 border-transparent
+
+  }
+  .tab:hover {
+    @apply border-b-[#FF601F88]
+  }
+
+  .tab-selector:checked ~ .tab {
+    @apply border-b-[#FF601F]
+  }
+
+  .panel {
+    @apply py-12
+  }
+  @layer components {
+    .form {
+      @apply font-body max-w-[607px] mx-auto flex flex-col gap-6
+    }
+    .form > div {
+      @apply flex flex-col gap-6
+    }
+    .form > div > div  {
+      @apply flex flex-col gap-1.5
+    }
+    .form > div > div > label {
+      @apply text-[#344054] font-medium text-sm
+    }
+    .form > div > div > input, .form > div > div > textarea {
+      @apply px-3.5 py-4 rounded-lg border border-solid outline-[#FF601F]
+    }
+  }
+</style>

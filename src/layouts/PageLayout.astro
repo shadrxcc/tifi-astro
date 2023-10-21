@@ -21,6 +21,9 @@ const { title, titleHeader, showHeader = true, showFooter = true } = Astro.props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Noto+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700&family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <ViewTransitions />
   </head>
   <body>
@@ -32,31 +35,26 @@ const { title, titleHeader, showHeader = true, showFooter = true } = Astro.props
   </body>
 </html>
 <style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  @layer base {
+    body {
+      @apply text-[#344054]
+    }
+    textarea {
+      @apply resize-none
+    }
   }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
+  @layer components {
+    .input {
+      @apply border-none outline-transparent
+    }
+    .btn {
+      @apply py-3 px-5 inline-flex border-none items-center justify-center rounded-lg
+    }
+    .btn.btn-primary{
+      @apply bg-[#FF601F] text-white font-extrabold font-button shadow-[0px_14px_16px_0px_rgba(29,41,57,0.05)]
+    }
   }
 </style>
