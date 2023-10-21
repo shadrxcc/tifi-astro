@@ -1,0 +1,57 @@
+---
+import DetailCard from '../DetailCard.tsx';
+import MansoryGrid from './masonry';
+interface Props {
+	data?: {
+    title: string
+    body: string
+  }[]
+  className?: string
+}
+
+const initialData = [
+  {
+    title: "What services does tifi.tv offer",
+    body: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling.",
+  },
+  {
+    title: "Do you provide custom solutions for unique projects",
+    body: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling.",
+  },
+  {
+    title: "Can you provide pricing information for your services?",
+    body: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling.",
+  },
+  {
+    title: "How can I get started with your services?",
+    body: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling.",
+  },
+  {
+    title: "Can I see examples of your previous work?",
+    body: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling.",
+  },
+  {
+    title: "What is the typical process when working with tifi.tv?",
+    body: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling.",
+  },
+  {
+    title: "What sets tifi.tv apart from other agencies?",
+    body: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling.",
+  },
+  {
+    title: "Do you have any case studies or success stories to share?",
+    body: "Tifi.tv offers a wide range of services, including video editing, content creation, motion graphics, color grading, animation, and more. Our goal is to bring your creative vision to life through visual storytelling.",
+  },
+]
+
+const { data = initialData, className } = Astro.props;
+---
+<div class={`flex flex-col gap-12 ${className && className}`}>
+  <header>
+    <h1 class="font-semibold text-center font-serif text-[4rem]">FAQ</h1>
+  </header>
+  <div>
+    <MansoryGrid items={data} client:load >
+    </MansoryGrid>
+  </div>
+</div>
