@@ -1,0 +1,123 @@
+---
+import Letscreateform from "../home/letscreateform.astro";
+
+---
+
+<section class="flex px-4 sm:px-8 flex-col gap-y-12 py-16">
+  <section class="flex flex-col gap-y-8">
+    <div class="flex border-b justify-center gap-x-10">
+      <p class="text-base text-primaryorange font-bold border-b-[2px] border-primaryorange pb-1 tab-trigger" data-form="business">Business</p>
+      <p>Individual</p>
+    </div>
+    <form action="send" id="business" class="flex flex-col m-auto w-full sm:w-[80%] lg:w-2/4 gap-y-6">
+      <span class="flex gap-y-2 flex-col">
+        <label class="text-[#344054] font-medium text-sm" for="name">Company Name</label>
+  
+        <input
+          class="border border-[#98A2B3] w-full p-4 text-base placeholder:text-[#98A2B] rounded-lg"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter business name"
+        />
+      </span>
+  
+      <span class="flex gap-y-2 flex-col">
+          <label class="text-[#344054] font-medium text-sm" for="name">Business Email Address</label>
+          <input
+            class="border border-[#98A2B3] w-full p-4 text-base placeholder:text-[#98A2B] rounded-lg"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter email address"
+          />
+        </span>
+  
+        <span class="flex gap-y-2 flex-col">
+          <label class="text-[#344054] font-medium text-sm" for="name">Subject (Optional)</label>
+    
+          <input
+            class="border border-[#98A2B3] w-full p-4 text-base placeholder:text-[#98A2B] rounded-lg"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter subject"
+          />
+        </span>
+  
+        <span class="flex gap-y-2 flex-col">
+          <label class="text-[#344054] font-medium text-sm" for="name">Tell us what you need.</label>
+    
+          <textarea name="message" class="border border-[#98A2B3] w-full p-4 text-base placeholder:text-[#98A2B] rounded-lg" placeholder="Type your message" id="message" cols="30" rows="5"></textarea>
+        </span>
+  
+        <button class="py-3 rounded-lg bg-primaryblue sm:bg-primaryorange text-base text-white font-extrabold">SEND MESSAGE</button>
+    </form>
+  
+    <form action="send" id="indiviual" class="flex-col m-auto w-full sm:w-[80%] hidden lg:w-2/4 gap-y-6">
+      <span class="flex gap-y-2 flex-col">
+        <label class="text-[#344054] font-medium text-sm" for="name">Individual Name</label>
+  
+        <input
+          class="border border-[#98A2B3] w-full p-4 text-base placeholder:text-[#98A2B] rounded-lg"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+        />
+      </span>
+  
+      <span class="flex gap-y-2 flex-col">
+          <label class="text-[#344054] font-medium text-sm" for="name">Email Address</label>
+          <input
+            class="border border-[#98A2B3] w-full p-4 text-base placeholder:text-[#98A2B] rounded-lg"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter email address"
+          />
+        </span>
+  
+        <span class="flex gap-y-2 flex-col">
+          <label class="text-[#344054] font-medium text-sm" for="name">Subject (Optional)</label>
+    
+          <input
+            class="border border-[#98A2B3] w-full p-4 text-base placeholder:text-[#98A2B] rounded-lg"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter subject"
+          />
+        </span>
+  
+        <span class="flex gap-y-2 flex-col">
+          <label class="text-[#344054] font-medium text-sm" for="name">Tell us what you need.</label>
+    
+          <textarea name="message" class="border border-[#98A2B3] w-full p-4 text-base placeholder:text-[#98A2B] rounded-lg" placeholder="Type your message" id="message" cols="30" rows="5"></textarea>
+        </span>
+  
+        <button class="py-3 rounded-lg bg-primaryblue sm:bg-primaryorange text-base text-white font-extrabold">SEND MESSAGE</button>
+    </form>
+</section>
+    
+</section>
+
+<style>
+  section {
+    background-image: url(../../assets/help.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1 {
+    color: var(--gray-1100, #101828);
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+</style>

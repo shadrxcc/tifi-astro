@@ -1,0 +1,70 @@
+---
+import search from "../../assets/search.png";
+---
+
+<section
+  class="text-center lg:rounded-2xl px-4 flex lg:w-[80%] pb-11 gap-y-6 justify-center mx-auto flex-col items-center"
+>
+<div class="flex flex-col gap-y-12 items-center">
+  <div class="space-y-6">
+   <h1 class="text-[32px] sm:text-[48px] lg:text-[72px]">
+    Resources and <span class="text-primaryorange">Insights</span>
+  </h1>
+  <p class="text-center text-base">
+    The latest industry news, technologies, and resources.
+  </p>
+</div>
+ 
+  <div id="search" class="flex gap-x-2 w-[10rem] bg-white items-center">
+    <img src={search.src} alt="" /><input
+      type="search" placeholder="Search"
+      class="bg-transparent outline-none border-none"
+    />
+  </div>
+</div>
+
+</section>
+
+<style>
+  section {
+    background: linear-gradient(
+      180deg,
+      rgba(234, 236, 240, 0) 35.1%,
+      #eaecf0 100%
+    );
+    height: 400px;
+  }
+  h1 {
+    color: var(--gray-1100, #101828);
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  #search {
+    border-radius: 8px;
+    border: 1px solid var(--gray-300, #d0d5dd);
+    background: var(--base-white, #fff);
+    padding: 12px 16px;
+    width: 100%;
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  }
+
+  p {
+    color: var(--gray-1000, #1d2939);
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+
+  @media (min-width: 640px) {
+    #search {
+    width: 40%;
+    /* Shadow/xs */
+  }
+  }
+</style>

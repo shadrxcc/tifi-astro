@@ -1,0 +1,111 @@
+---
+import casee from "../../assets/case.png";
+import arrow from "../../assets/black-arrow.png";
+---
+
+<section
+  class="flex flex-col px-4 sm:px-8 lg:px-20 items-center gap-y-14 py-14"
+>
+  <div class="flex flex-col items-center text-center">
+    <h1 class="text-[32px] sm:text-[48px] lg:text-[64px]">
+      Case <span class="text-primaryorange">Studies</span>
+    </h1>
+    <p class="text-center text-base">
+      Explore some of our standout projects, each representing a unique facet of
+      our video editing and storytelling expertise. These projects transcend
+      mere videos; they're captivating narratives that inspire and make an
+      impact.
+    </p>
+  </div>
+
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="flex flex-col bg-white p-8 gap-y-12">
+      <div class="flex flex-col gap-y-8">
+        <div class="flex flex-col gap-y-2">
+          <!-- <img src={casee.src} class="w-[50px]" alt="" /> -->
+          <p class="text-2xl font-bold">Wanderlust Chronicles</p>
+        </div>
+
+        <div>
+          <p class="text-base">
+            The project garnered over 1 million views and sparked a 20% increase
+            in travel bookings for our client
+          </p>
+        </div>
+      </div>
+
+      <button
+        class="flex items-center justify-center rounded-lg border w-fit font-extrabold text-base border-[#98A2B3] gap-x-3 px-5 py-4"
+        >View All Projects <img src={arrow.src} alt="arrow-icon" /></button
+      >
+    </div>
+
+    <div class="flex flex-col bg-white p-8 gap-y-12">
+      <div class="flex flex-col gap-y-8">
+        <div class="flex flex-col gap-y-2">
+          <!-- <img src={casee.src} class="w-[50px]" alt="" /> -->
+          <p class="text-2xl font-bold">City Vibes Unveiled</p>
+        </div>
+
+        <div>
+          <p class="text-base">
+            The series achieved a 30% increase in viewer engagement, with viewers expressing a strong connection to the featured cities.
+          </p>
+        </div>
+      </div>
+
+      <button
+        class="flex items-center justify-center rounded-lg border w-fit font-extrabold text-base border-[#98A2B3] gap-x-3 px-5 py-4"
+        >View All Projects <img src={arrow.src} alt="arrow-icon" /></button
+      >
+    </div>
+
+    <div class="flex flex-col bg-white p-8 gap-y-12">
+      <div class="flex flex-col gap-y-8">
+        <div class="flex flex-col gap-y-2">
+          <!-- <img src={casee.src} class="w-[50px]" alt="" /> -->
+          <p class="text-2xl font-bold">A Lifetime in a Day</p>
+        </div>
+
+        <div>
+          <p class="text-base">
+            The video left a lasting impression, with heartfelt reactions from viewers and 50,000 shares across social media platforms.
+          </p>
+        </div>
+      </div>
+
+      <button
+        class="flex items-center justify-center rounded-lg border w-fit font-extrabold text-base border-[#98A2B3] gap-x-3 px-5 py-4"
+        >View All Projects <img src={arrow.src} alt="arrow-icon" /></button
+      >
+    </div>
+
+    <div class="hidden sm:flex lg:hidden flex-col bg-white p-8 gap-y-12">
+        <div class="flex flex-col gap-y-8">
+          <div class="flex flex-col gap-y-2">
+            <!-- <img src={casee.src} class="w-[50px]" alt="" /> -->
+            <p class="text-2xl font-bold">Wanderlust Chronicles</p>
+          </div>
+  
+          <div>
+            <p class="text-base">
+              The project garnered over 1 million views and sparked a 20% increase
+              in travel bookings for our client
+            </p>
+          </div>
+        </div>
+  
+        <button
+          class="flex items-center justify-center rounded-lg border w-fit font-extrabold text-base border-[#98A2B3] gap-x-3 px-5 py-4"
+          >View All Projects <img src={arrow.src} alt="arrow-icon" /></button
+        >
+      </div>
+  
+  </div>
+</section>
+
+<style>
+  section {
+    background: var(--gray-300, #f2f4f7);
+  }
+</style>
