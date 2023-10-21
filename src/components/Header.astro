@@ -3,14 +3,6 @@ import logo from "../assets/Tifi.png";
 import menu from "../assets/menu.png";
 ---
 
-<script>
-  let isMenuOpen = false;
-
-  function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-  }
-</script>
-
 <header
   class="bg-white noto flex py-6 px-[22px] lg:rounded-3xl shadow-[0px_14px_16px_0px_rgba(29,41,57,0.05)] lg:my-8 lg:w-[80%] mx-auto items-center justify-between"
 >
@@ -20,15 +12,15 @@ import menu from "../assets/menu.png";
 
   <div>
     <ul
-      class="hidden lg:flex noto flex-col top-0 left-0 bg-white lg:bg-transparent right-0 absolute lg:relative lg:flex-row text-base text-[#1D2939] items-center gap-8"
+      class="hidden py-8 lg:py-0 lg:flex noto flex-col top-24 left-0 lg:top-0 bg-white lg:bg-transparent right-0 absolute lg:relative lg:flex-row text-base text-[#1D2939] items-center gap-8"
     >
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/individuals">Clients</a></li>
-      <li><a href="/resources">Resources</a></li>
+      <li class=" lg:hover:text-primaryorange"><a href="/about">About Us</a></li>
+      <li class=" lg:hover:text-primaryorange"><a href="/portfolio">Portfolio</a></li>
+      <li class=" lg:hover:text-primaryorange"><a href="/individuals">Clients</a></li>
+      <li class=" lg:hover:text-primaryorange"><a href="/resources">Resources</a></li>
       <li class="lg:hidden">
         <button
-          class="bg-[#FF601F] text-base font-bold py-3 px-5 text-white rounded-lg"
+          class="bg-[#FF601F] lg:hover:scale-[1.1] text-base font-bold py-3 px-5 text-white rounded-lg"
         >
           <a href="/contact">LET'S TALK</a>
         </button>
@@ -42,7 +34,7 @@ import menu from "../assets/menu.png";
     <a href="/contact">LET'S TALK</a>
   </button>
 
-  <div class="lg:hidden">
+  <div id="menu-icon" class="lg:hidden">
     <img src={menu.src} alt="" />
   </div>
 </header>
