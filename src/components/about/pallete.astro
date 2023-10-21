@@ -2,25 +2,7 @@
 import pallete1 from "../../assets/pallete1.png";
 import pallete2 from "../../assets/pallete2.png";
 import pallete3 from "../../assets/pallete3.png";
-// const pallete = [
-// {
-//     title: "The Art of Storytelling Through Video",
-//     image: '/src/assets/content-3.png',
-//     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
-//   },
-
-//   {
-//     title: "7 Essential Video Editing Techniques",
-//     image: '/src/assets/content-2.png',
-//     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
-//   },
-
-//   {
-//     title: "The Impact of Color Grading in Video Editing",
-//     image: '/src/assets/content-3.png',
-//     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
-//   },
-// ]
+import arrow from "../../assets/white-arrow.png";
 ---
 
 <section class="px-4 bg-[#F2F4F7] my-16 flex flex-col items-center gap-y-14 py-16 sm:px-8 lg:px-20">
@@ -33,8 +15,8 @@ import pallete3 from "../../assets/pallete3.png";
     <div class="flex flex-col items-center">
       <img src={pallete1.src} class="w-full h-[17em]" alt="" />
       <div class="flex flex-col items-center px-4 py-8 bg-white text-center">
-        <p>Product Demonstrations</p>
-        <p>
+        <p class="text-lg font-bold">Product <span class="text-primaryorange">Demonstrations</span></p>
+        <p class="text-base text-[#344054]">
           Present your products in their best light with dynamic and engaging
           demonstrations that showcase their features and benefits.
         </p>
@@ -44,8 +26,8 @@ import pallete3 from "../../assets/pallete3.png";
     <div class="flex flex-col items-center">
         <img src={pallete2.src} class="w-full h-[17em]" alt="" />
         <div class="flex flex-col items-center px-4 py-8 bg-white text-center">
-          <p>Product Demonstrations</p>
-          <p>
+            <p class="text-lg font-bold">Promotional <span class="text-primaryorange">Videos</span></p>
+            <p class="text-base text-[#344054]">
             Present your products in their best light with dynamic and engaging
             demonstrations that showcase their features and benefits.
           </p>
@@ -55,13 +37,21 @@ import pallete3 from "../../assets/pallete3.png";
       <div class="flex flex-col items-center">
         <img src={pallete3.src} class="w-full h-[17em]" alt="" />
         <div class="flex flex-col items-center px-4 py-8 bg-white text-center">
-          <p>Product Demonstrations</p>
-          <p>
+            <p class="text-lg font-bold"><span class="text-primaryorange">Internal </span>Communications</p>
+          <p class="text-base text-[#344054]">
             Present your products in their best light with dynamic and engaging
             demonstrations that showcase their features and benefits.
           </p>
         </div>
       </div>
+  </div>
+
+  <div class="flex flex-col items-center gap-y-12">
+    <p class="text-center w-[60%]">We believe that every video has a story to tell, and every story has a message that connects. Our corporate video services are not just about visuals; they're about creating a lasting impact on your branding and marketing goals.</p>
+    <button
+    class="bg-[#FF601F] text-base font-extrabold mx-auto px-5 py-3 flex gap-x-3 items-center text-white rounded-lg"
+    >LET'S TALK! <img src={arrow.src} alt="" /></button
+  >
   </div>
 </section>
 
